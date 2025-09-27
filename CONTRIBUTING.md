@@ -1,3 +1,5 @@
+![GitHub repo size](https://img.shields.io/github/repo-size/4uffin/reallybig)
+
 # **Contributing to the Big Repo Project**
 
 First off, thank you for considering contributing! This project has a simple, yet profound, goal: to become one of the largest repositories on GitHub in terms of file size. Your contributions are the lifeblood of this beautifully absurd endeavor.
