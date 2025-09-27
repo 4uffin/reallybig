@@ -1,3 +1,5 @@
+![GitHub repo size](https://img.shields.io/github/repo-size/4uffin/reallybig)
+
 # 🗃️ The Big Repo Project
 
 > **An experiment in pushing GitHub's limits, one massive file at a time.**
