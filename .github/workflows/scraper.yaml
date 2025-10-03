@@ -39,11 +39,11 @@ jobs:
         run: python scraper.py
         continue-on-error: true 
         
-      # 5. Commit the new images to the repository (FIXED INPUT)
+      # 5. Commit the new images to the repository
       - name: Commit files
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          # FIX: Use 'file_pattern' instead of 'files' and use globbing for files in the directory
-          file_pattern: 'reallybig/4uffin/images/scraped/**' 
+          # UPDATED: Simplified path in the file_pattern
+          file_pattern: '4uffin/images/scraped/**' 
           commit_message: |
             ${{ steps.scraper_run.outcome == 'success' && '🤖 Automated scrape: New wallpapers added.' || '⚠️ Automated scrape: Scraper FAILED, attempting to commit existing files.' }}
