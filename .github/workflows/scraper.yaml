@@ -13,9 +13,12 @@ jobs:
   scrape_and_commit:
     runs-on: ubuntu-latest
     
+    # FIX: Explicitly grant write permissions to GITHUB_TOKEN for push
+    permissions: 
+      contents: write
+    
     steps:
       # 1. Checkout the repository code
-      # Give the default GITHUB_TOKEN write permission for the commit action
       - name: Checkout code
         uses: actions/checkout@v4
 
@@ -31,19 +34,16 @@ jobs:
           pip install requests beautifulsoup4 pyyaml
           
       # 4. Run the Python scraping script
-      # 'continue-on-error: true' ensures the workflow continues even if the scraper fails.
       - name: Run Scraper
         id: scraper_run
         run: python scraper.py
         continue-on-error: true 
         
-      # 5. Commit the new images to the repository (FIXED ACTION)
+      # 5. Commit the new images to the repository (FIXED INPUT)
       - name: Commit files
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          # This action requires the list of files/directories to be in the 'files' parameter
-          files: 'reallybig/4uffin/images/scraped' 
-          # Use 'commit_message' instead of 'message'
+          # FIX: Use 'file_pattern' instead of 'files' and use globbing for files in the directory
+          file_pattern: 'reallybig/4uffin/images/scraped/**' 
           commit_message: |
             ${{ steps.scraper_run.outcome == 'success' && '🤖 Automated scrape: New wallpapers added.' || '⚠️ Automated scrape: Scraper FAILED, attempting to commit existing files.' }}
-          # The token is passed automatically by default, but it's good practice to ensure permissions are set
