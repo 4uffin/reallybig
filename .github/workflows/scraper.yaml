@@ -15,6 +15,7 @@ jobs:
     
     steps:
       # 1. Checkout the repository code
+      # Give the default GITHUB_TOKEN write permission for the commit action
       - name: Checkout code
         uses: actions/checkout@v4
 
@@ -36,12 +37,13 @@ jobs:
         run: python scraper.py
         continue-on-error: true 
         
-      # 5. Commit the new images to the repository
+      # 5. Commit the new images to the repository (FIXED ACTION)
       - name: Commit files
-        uses: stefanprodan/commit-action@v2
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          # UPDATED: Must match the path in config.yaml for committing new files
-          add: 'reallybig/4uffin/images/scraped' 
-          message: |
+          # This action requires the list of files/directories to be in the 'files' parameter
+          files: 'reallybig/4uffin/images/scraped' 
+          # Use 'commit_message' instead of 'message'
+          commit_message: |
             ${{ steps.scraper_run.outcome == 'success' && '🤖 Automated scrape: New wallpapers added.' || '⚠️ Automated scrape: Scraper FAILED, attempting to commit existing files.' }}
-          token: ${{ secrets.GITHUB_TOKEN }}
+          # The token is passed automatically by default, but it's good practice to ensure permissions are set
