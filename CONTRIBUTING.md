@@ -2,6 +2,8 @@
 
 # **Contributing to the Big Repo Project**
 
+> **An experiment in pushing GitHub's limits, one massive file at a time.**
+
 First off, thank you for considering contributing! This project has a simple, yet profound, goal: to become one of the largest repositories on GitHub in terms of file size. Your contributions are the lifeblood of this beautifully absurd endeavor.
 
 ## **The Mission**
@@ -10,9 +12,9 @@ To collectively add as much data as possible to this single repository. I'm test
 
 ## **Current Repository Stats**
 
-📊 **Current Size:** ~2GB and growing!
-🎯 **Goal:** Push the boundaries of what's possible on GitHub
-📁 **Files Added:** Various large datasets, media files, and generated content
+- 📊 **Current Size:** ~3GB and growing!
+- 🎯 **Goal:** Push the boundaries of what's possible on GitHub
+- 📁 **Files Added:** Various large datasets, media files, and generated content
 
 ## **How to Contribute**
 
@@ -25,17 +27,19 @@ Adding weight to the project is easy. Just follow these steps:
 1. **Fork the repository** to your own GitHub account.
 2. **Clone your fork** to your local machine.
 3. **Add Your File(s):**
-   * Create a new folder inside the data/ directory. Please name it something unique or descriptive (e.g., your-username_files, large_cat_pictures, random_data_chunk_1).
-   * Place your large file(s) inside your new folder.
+   * Create a new folder (ex. yourusername/).
+   * Place your large file(s) inside your new folder(s).
 
 The structure should look something like this:
+
 ```
-├── data/
-│   ├── your-username_files/
-│   │   └── your_large_file.dat
-│   ├── large_cat_pictures/
-│   │   └── massive_cat.jpg
-│   └── ... (add your new folder here)
+├── username/
+│   ├── images/
+│   │   ├── image.png
+│   │   └── ...(another image.png)
+│   └── audio/
+│       └── audio.wav
+│       └── ...(another audio.wav)
 ├── .gitignore
 ├── README.md
 └── CONTRIBUTING.md
@@ -134,6 +138,5 @@ I am intentionally **not** using Git Large File Storage (LFS). The goal is to bl
 If you run into issues or have questions about contributing:
 * **Open an Issue** on the repository - I monitor these regularly
 * **Check existing Issues** - someone might have already solved your problem
-* **GitHub Username:** @Connor (feel free to tag me in discussions)
 
 Let's make this repository legendarily large together!
