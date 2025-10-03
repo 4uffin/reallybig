@@ -26,7 +26,7 @@ def scrape_images(config):
     url = config['scraper']['target_url']
     repo_folder = config['scraper']['repository_folder']
     
-    # Ensure the repository folder exists
+    # os.makedirs creates all intermediate directories needed for the deep path
     os.makedirs(repo_folder, exist_ok=True)
     print(f"Attempting to scrape: {url}")
     
@@ -39,9 +39,8 @@ def scrape_images(config):
         # Raise an HTTPError for bad responses (4xx or 5xx)
         response.raise_for_status() 
     except requests.exceptions.RequestException as e:
-        # This will cause the script to fail, but the Action will continue due to 'continue-on-error: true'
-        print(f"FATAL: Failed to fetch the URL. Stopping script. Error: {e}")
         # Raising the exception here ensures GitHub Actions registers the failure.
+        print(f"FATAL: Failed to fetch the URL. Stopping script. Error: {e}")
         raise 
 
     soup = BeautifulSoup(response.text, 'html.parser')
@@ -56,7 +55,7 @@ def scrape_images(config):
         if src:
             unique_image_urls.add(urljoin(url, src))
 
-    # 2. Search for <a> tags linking directly to image files (common for downloads)
+    # 2. Search for <a> tags linking directly to image files 
     for tag in soup.find_all('a', href=True):
         href = tag['href']
         full_url = urljoin(url, href)
@@ -78,7 +77,7 @@ def scrape_images(config):
     # Convert set to list for iteration
     for img_url in list(unique_image_urls): 
         
-        # Simple heuristics to skip common non-wallpaper images (logos, avatars, thumbnails)
+        # Simple heuristics to skip common non-wallpaper images
         url_lower = img_url.lower()
         if any(keyword in url_lower for keyword in ['logo', 'thumb', 'avatar', 'icon']):
             continue
@@ -121,6 +120,4 @@ if __name__ == '__main__':
             scrape_images(config_data)
         print("\nScraping process complete.")
     except Exception as e:
-        # Allow the script to exit gracefully even if a major error occurs
-        # The 'raise' inside scrape_images is what signals the GitHub Action step failure.
         print(f"\nScript halted due to a critical error: {e}")
