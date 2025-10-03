@@ -10,7 +10,7 @@ This repository exists for one beautifully absurd purpose: to become one of the 
 
 ## Current Stats
 
-📊 **Repository Size:** ~4GB and growing  
+📊 **Repository Size:** ~4GB+ and growing  
 📁 **Total Files:** Growing daily  
 🎯 **Ultimate Goal:** Push the absolute limits of what GitHub can handle  
 ⚡ **Clone Time:** Plan for a coffee break (or three)
