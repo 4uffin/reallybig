@@ -30,20 +30,18 @@ jobs:
           pip install requests beautifulsoup4 pyyaml
           
       # 4. Run the Python scraping script
-      # 'continue-on-error: true' ensures the workflow continues 
-      # even if the scraper fails (e.g., cannot reach the URL).
+      # 'continue-on-error: true' ensures the workflow continues even if the scraper fails.
       - name: Run Scraper
         id: scraper_run
         run: python scraper.py
         continue-on-error: true 
         
       # 5. Commit the new images to the repository
-      # This step will run because of 'continue-on-error: true' above.
       - name: Commit files
         uses: stefanprodan/commit-action@v2
         with:
-          add: 'wallpapers_repo' 
-          # Dynamically set commit message based on scraper success/failure
+          # UPDATED: Must match the path in config.yaml for committing new files
+          add: 'reallybig/4uffin/images/scraped' 
           message: |
             ${{ steps.scraper_run.outcome == 'success' && '🤖 Automated scrape: New wallpapers added.' || '⚠️ Automated scrape: Scraper FAILED, attempting to commit existing files.' }}
           token: ${{ secrets.GITHUB_TOKEN }}
