@@ -1,0 +1,49 @@
+# .github/workflows/scraper.yaml
+name: Scheduled Wallpaper Scraper
+
+on:
+  # Schedule to run twice a day (every 12 hours) in UTC time.
+  schedule:
+    - cron: '0 10,22 * * *'
+  
+  # Allows manual running of the workflow from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  scrape_and_commit:
+    runs-on: ubuntu-latest
+    
+    steps:
+      # 1. Checkout the repository code
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # 2. Set up Python environment
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          
+      # 3. Install necessary dependencies
+      - name: Install dependencies
+        run: |
+          pip install requests beautifulsoup4 pyyaml
+          
+      # 4. Run the Python scraping script
+      # 'continue-on-error: true' ensures the workflow continues 
+      # even if the scraper fails (e.g., cannot reach the URL).
+      - name: Run Scraper
+        id: scraper_run
+        run: python scraper.py
+        continue-on-error: true 
+        
+      # 5. Commit the new images to the repository
+      # This step will run because of 'continue-on-error: true' above.
+      - name: Commit files
+        uses: stefanprodan/commit-action@v2
+        with:
+          add: 'wallpapers_repo' 
+          # Dynamically set commit message based on scraper success/failure
+          message: |
+            ${{ steps.scraper_run.outcome == 'success' && '🤖 Automated scrape: New wallpapers added.' || '⚠️ Automated scrape: Scraper FAILED, attempting to commit existing files.' }}
+          token: ${{ secrets.GITHUB_TOKEN }}
