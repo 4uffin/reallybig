@@ -2,9 +2,9 @@
 name: Scheduled Wallpaper Scraper
 
 on:
-  # Schedule to run twice a day (every 12 hours) in UTC time.
+  # FIX: Schedule changed to run every hour on the hour (0 * * * *) UTC time.
   schedule:
-    - cron: '0 10,22 * * *'
+    - cron: '0 * * * *'
   
   # Allows manual running of the workflow from the Actions tab
   workflow_dispatch:
