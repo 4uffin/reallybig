@@ -10,7 +10,7 @@ This repository exists for one beautifully absurd purpose: to become one of the 
 
 ## Current Stats
 
-📊 **Repository Size:** ~2GB and growing  
+📊 **Repository Size:** ~3GB and growing  
 📁 **Total Files:** Growing daily  
 🎯 **Ultimate Goal:** Push the absolute limits of what GitHub can handle  
 ⚡ **Clone Time:** Plan for a coffee break (or three)
@@ -29,21 +29,19 @@ This project explores several interesting questions:
 The repository is organized with a simple structure to accommodate massive files:
 
 ```
-├── data/
-│   ├── contributor1_files/
-│   │   ├── large_dataset.csv
-│   │   └── high_res_images.zip
-│   ├── scientific_data/
-│   │   └── weather_observations.dat
-│   ├── audio_collection/
-│   │   └── uncompressed_music.wav
-│   └── ... (your contributions here!)
+├── username/
+│   ├── images/
+│   │   ├── image.png
+│   │   └── ...(another image.png)
+│   └── audio/
+│       └── audio.wav
+│       └── ...(another audio.wav)
 ├── .gitignore
 ├── README.md
 └── CONTRIBUTING.md
 ```
 
-The `/data` directory contains contributions from various sources:
+The `/username` directory contains contributions from various sources:
 
 - Large datasets and CSV files
 - High-resolution image collections  
@@ -55,7 +53,8 @@ The `/data` directory contains contributions from various sources:
 
 ## Want to Contribute?
 
-**🚨 Warning:** This repository is LARGE. Cloning will take significant time and bandwidth.
+> [!WARNING]
+> This repository is LARGE. Cloning will take significant time and bandwidth.
 
 If you want to add your own massive files to this experiment, check out [CONTRIBUTING.md](CONTRIBUTING.md) for detailed instructions.
 
@@ -68,7 +67,7 @@ If you want to add your own massive files to this experiment, check out [CONTRIB
 ## Performance Notes
 
 ⚠️ **Before You Clone:**
-- Full clone is ~2GB+ and growing
+- Full clone is ~3GB+ and growing
 - Consider using `git clone --depth 1` for a shallow clone
 - Cloning may take 10-30+ minutes depending on your connection
 - Make sure you have sufficient disk space
@@ -108,6 +107,6 @@ This isn't about efficiency or best practices. It's about exploration, collabora
 
 ---
 
-**Ready to contribute to something magnificently unnecessary?** Check out [CONTRIBUTING.md](CONTRIBUTING.md) and help us make GitHub history!
+**Ready to contribute to something magnificently unnecessary?** Check out [CONTRIBUTING.md](CONTRIBUTING.md) and help me make GitHub history!
 
 ⭐ **Star this repo** if you appreciate digital absurdism at scale!
