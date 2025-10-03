@@ -10,7 +10,7 @@ This repository exists for one beautifully absurd purpose: to become one of the 
 
 ## Current Stats
 
-📊 **Repository Size:** ~3GB and growing  
+📊 **Repository Size:** ~4GB and growing  
 📁 **Total Files:** Growing daily  
 🎯 **Ultimate Goal:** Push the absolute limits of what GitHub can handle  
 ⚡ **Clone Time:** Plan for a coffee break (or three)
@@ -67,7 +67,7 @@ If you want to add your own massive files to this experiment, check out [CONTRIB
 ## Performance Notes
 
 ⚠️ **Before You Clone:**
-- Full clone is ~3GB+ and growing
+- Full clone is ~4GB+ and growing
 - Consider using `git clone --depth 1` for a shallow clone
 - Cloning may take 10-30+ minutes depending on your connection
 - Make sure you have sufficient disk space
