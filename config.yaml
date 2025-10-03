@@ -1,11 +1,10 @@
 # config.yaml
 
 settings:
-  # The time interval is handled by the external cron/Task Scheduler.
-  # This section is for documentation/future-proofing.
+  # The time interval is handled by GitHub Actions cron schedule.
   schedule_interval: "12 hours"
 
 scraper:
   target_url: "https://4kwallpapers.com/random-wallpapers/"
-  # The folder where the scraped images will be saved.
-  repository_folder: "wallpapers_repo"
+  # UPDATED: New deep directory path
+  repository_folder: "reallybig/4uffin/images/scraped"
