@@ -6,5 +6,5 @@ settings:
 
 scraper:
   target_url: "https://4kwallpapers.com/random-wallpapers/"
-  # UPDATED: New deep directory path
-  repository_folder: "reallybig/4uffin/images/scraped"
+  # UPDATED: Simplified path
+  repository_folder: "4uffin/images/scraped"
