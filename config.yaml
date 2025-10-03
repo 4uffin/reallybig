@@ -2,7 +2,7 @@
 
 settings:
   # The time interval is handled by GitHub Actions cron schedule.
-  schedule_interval: "12 hours"
+  schedule_interval: "1 hour"
 
 scraper:
   target_url: "https://4kwallpapers.com/random-wallpapers/"
