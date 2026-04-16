@@ -12,9 +12,7 @@ To collectively add as much data as possible to this single repository. I'm test
 
 ## **Current Repository Stats**
 
-- 📊 **Current Size:** ~4GB+ and growing!
-- 🎯 **Goal:** Push the boundaries of what's possible on GitHub
-- 📁 **Files Added:** Various large datasets, media files, and generated content
+- 📊 **Current Size:** ~5GB+ and growing
 
 ## **How to Contribute**
 
