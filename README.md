@@ -8,13 +8,6 @@
 
 This repository exists for one beautifully absurd purpose: to become one of the largest repositories on GitHub by raw file size. It's part experiment, part stress test, and part digital art project exploring the boundaries of version control at scale.
 
-## Current Stats
-
-📊 **Repository Size:** ~4GB+ and growing  
-📁 **Total Files:** Growing daily  
-🎯 **Ultimate Goal:** Push the absolute limits of what GitHub can handle  
-⚡ **Clone Time:** Plan for a coffee break (or three)
-
 ## The Experiment
 
 This project explores several interesting questions:
@@ -51,6 +44,10 @@ The `/username` directory contains contributions from various sources:
 - Scientific data collections
 - And much more...
 
+## Current Stats
+
+📊 **Repository Size:** ~5GB+ and growing
+
 ## Want to Contribute?
 
 > [!WARNING]
@@ -67,7 +64,6 @@ If you want to add your own massive files to this experiment, check out [CONTRIB
 ## Performance Notes
 
 ⚠️ **Before You Clone:**
-- Full clone is ~4GB+ and growing
 - Consider using `git clone --depth 1` for a shallow clone
 - Cloning may take 10-30+ minutes depending on your connection
 - Make sure you have sufficient disk space
@@ -87,10 +83,6 @@ Beyond the absurdity, this project serves as:
 - This project respects GitHub's Terms of Service
 - No copyrighted material without proper permissions
 - No illegal, offensive, or malicious content
-
-## Contributing Recognition
-
-Contributors who add substantial file sizes will be recognized in future updates to this README. Every byte counts in this digital collaboration!
 
 ## Technical Details
 
