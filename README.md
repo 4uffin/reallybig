@@ -1,4 +1,7 @@
-![GitHub repo size](https://img.shields.io/github/repo-size/4uffin/reallybig)
+![GitHub repo size](https://img.shields.io/github/repo-size/4uffin/reallybig?style=for-the-badge)
+![GitHub repo file or directory count](https://img.shields.io/github/directory-file-count/4uffin/reallybig?type=dir&style=for-the-badge&label=Users&color=Green)
+
+*(Powered by [Shields.io](https://shields.io/))*
 
 # 🗃️ The Big Repo Project
 
