@@ -1,0 +1,56 @@
+{
+  "name": "reallybig",
+  "type": "dir",
+  "generated": "2026-07-13",
+  "description": "Repository structure summary for GitHub Pages visualization.",
+  "children": [
+    {
+      "name": "4uffin",
+      "type": "dir",
+      "fileCount": 1061,
+      "size": 7753059913,
+      "children": [
+        {
+          "name": "audio",
+          "type": "dir",
+          "fileCount": 90,
+          "size": 1649700592
+        },
+        {
+          "name": "gifs",
+          "type": "dir",
+          "fileCount": 31,
+          "size": 84673806
+        },
+        {
+          "name": "images",
+          "type": "dir",
+          "fileCount": 930,
+          "size": 6010098450
+        },
+        {
+          "name": "text",
+          "type": "dir",
+          "fileCount": 4,
+          "size": 169902
+        },
+        {
+          "name": "videos",
+          "type": "dir",
+          "fileCount": 6,
+          "size": 8417163
+        }
+      ]
+    },
+    {
+      "name": "CONTRIBUTING.md",
+      "type": "file",
+      "size": 6921
+    },
+    {
+      "name": "README.md",
+      "type": "file",
+      "size": 3815
+    }
+  ]
+}
