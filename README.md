@@ -3,6 +3,9 @@
 
 *(Powered by [Shields.io](https://shields.io/))*
 
+> [!WARNING]
+> **Assume any contents in repository may be NOT SAFE FOR WORK (NSFW)**
+
 # 🗃️ The Big Repo Project
 
 > **An experiment in pushing GitHub's limits, one massive file at a time.**
