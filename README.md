@@ -47,9 +47,9 @@ The `/username` directory contains contributions from various sources:
 - Scientific data collections
 - And much more...
 
-## Current Stats
+## 📊 Current Stats
 
-📊 **Repository Size:** ~5GB+ and growing
+**Repository Size:** ~5GB+ and growing
 
 ## Want to Contribute?
 
@@ -99,9 +99,3 @@ Beyond the absurdity, this project serves as:
 > "In a world of minimalism and optimization, sometimes you need a project dedicated to beautiful, purposeful excess."
 
 This isn't about efficiency or best practices. It's about exploration, collaboration, and seeing what's possible when you abandon constraints and embrace digital maximalism.
-
----
-
-**Ready to contribute to something magnificently unnecessary?** Check out [CONTRIBUTING.md](CONTRIBUTING.md) and help me make GitHub history!
-
-⭐ **Star this repo** if you appreciate digital absurdism at scale!
